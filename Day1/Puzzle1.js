@@ -1001,8 +1001,30 @@ sxfvfdkff8dvlmbdktsixmzpnxzmml2
 9lgmxktj1frxl
 `;
 
-console.log("hello");
-
-const lines = input.split("\n");
+const lines = input.trim().split("\n");
 
 console.log(lines);
+
+function combineDigits(line) {
+  const digits = line.match(/\d/g);
+  console.log(digits);
+
+  const firstDigit = parseInt(digits[0]);
+  const lastDigit = parseInt(digits[digits.length - 1]);
+
+  const combinedNumber =
+    firstDigit === lastDigit ? firstDigit * 11 : firstDigit * 10 + lastDigit;
+
+  return combinedNumber;
+}
+
+const resultNumbers = lines.map(combineDigits);
+
+console.log(resultNumbers);
+
+const sum = resultNumbers.reduce((acc, number) => acc + number, 0);
+
+// Final Answer Puzzle 1:
+console.log("Sum:", sum);
+
+/////// PART 2 ///////
