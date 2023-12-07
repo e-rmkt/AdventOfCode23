@@ -1000,3 +1000,9 @@ oneeight2
 sxfvfdkff8dvlmbdktsixmzpnxzmml2
 9lgmxktj1frxl
 `;
+
+console.log("hello");
+
+const lines = input.split("\n");
+
+console.log(lines);
